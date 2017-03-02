@@ -8,8 +8,8 @@ dependencies:
   override:
     - docker info
     - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
-    - docker build -t circleci/elasticsearch .
-    - mkdir -p ~/docker; docker save circleci/elasticsearch > ~/docker/image.tar
+    - docker build -t danielpalstra/sslh .
+    - mkdir -p ~/docker; docker save danielpalstra/sslh > ~/docker/image.tar
 
 deployment:
   hub:
