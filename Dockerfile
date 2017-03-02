@@ -1,5 +1,6 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Arnaud Mondit <github.com/amondit>
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get -y install sslh \
     && rm -rf /var/lib/apt/lists/*
